@@ -1,8 +1,8 @@
 public class CellAutomata {
-    private int strength; //strength of the cell used for combat; always >0
-    private int xcoordinate; //cell coordinates; >=0
-    private int ycoordinate;
-    private int id; //distinguishes between cell types; always >=0
+    public int strength; //strength of the cell used for combat; always >0
+    public int xcoordinate; //cell coordinates; >=0
+    public int ycoordinate;
+    public int id; //distinguishes between cell types; always >=0
 
     public CellAutomata(int strength, int xcoordinate, int ycoordinate, int id) {
         this.strength = strength;
@@ -15,7 +15,10 @@ public class CellAutomata {
         this(0, 0, 0, 0);
     }
 
-    public void setStrength(int strength) {
+    public int getStrength() {
+        return strength;
+    }
+    public void setStrength() {
         if (strength >= 0) {
             this.strength = strength;
         } else {
@@ -23,57 +26,56 @@ public class CellAutomata {
         }
     }
 
-    public int getStrength() {
-        return this.strength;
-    }
 
-    public void setXcoordinate(int xcoordinate) {
+    public void setXcoordinate() {
         if (xcoordinate >= 0) {
             this.xcoordinate = xcoordinate;
         } else {
             this.xcoordinate = 0;
         }
     }
-
     public int getXcoordinate() {
         return this.xcoordinate;
     }
 
-    public void setYcoordinate(int ycoordinate) {
+    public void setYcoordinate() {
         if (ycoordinate >= 0) {
             this.ycoordinate = ycoordinate;
         } else {
             this.ycoordinate = 0;
         }
     }
-
     public int getYcoordinate() {
         return this.ycoordinate;
     }
 
-    public void setId(int id) {
+    public void setId() {
         if (id >= 0) {
             this.id = id;
         } else {
             this.id = 0;
         }
     }
-
     public int getId() {
         return this.id;
     }
 
-    public void interactNeighbors(ArrayList<Cell> neighbors){
+    //public void interactNeighbors(ArrayList<Cell> neighbors){
         //leave blank
-    }
+   // }
 
     public static void main(String[] args) {
-        CellAutomata Cell = new CellAutomata(77 ,4 , 4 , 1 );
+        CellAutomata Cell = new CellAutomata(-56 ,-1 , 5 , 7 );
 
-        System.out.println(Cell.strength);
-        System.out.println(Cell.xcoordinate);
-        System.out.println(Cell.ycoordinate);
-        System.out.println(Cell.id);
+        Cell.setStrength();
+        Cell.setXcoordinate();
+        Cell.setYcoordinate();
+        Cell.setId();
+
+        System.out.println(Cell.getStrength());
+        System.out.println(Cell.getXcoordinate());
+        System.out.println(Cell.getYcoordinate());
+        System.out.println(Cell.getId());
     }
 }
 
