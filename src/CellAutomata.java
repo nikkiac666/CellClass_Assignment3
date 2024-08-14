@@ -1,8 +1,8 @@
 public class CellAutomata {
-    public int strength; //strength of the cell used for combat; always >0
-    public int xcoordinate; //cell coordinates; >=0
-    public int ycoordinate;
-    public int id; //distinguishes between cell types; always >=0
+    private int strength; //strength of the cell used for combat; always >0
+    private int xcoordinate; //cell coordinates; >=0
+    private int ycoordinate;
+    private int id; //distinguishes between cell types; always >=0
 
     public CellAutomata(int strength, int xcoordinate, int ycoordinate, int id) {
         this.strength = strength;
