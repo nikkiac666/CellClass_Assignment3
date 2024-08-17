@@ -1,10 +1,10 @@
 import java.util.HashMap;
 
 public class CellAutomata {
-    private int strength; //strength of the cell used for combat; always >0
-    private int xcoordinate; //cell coordinates; >=0
-    private int ycoordinate;
-    private int id; //distinguishes between cell types; always >=0
+    protected int strength; //strength of the cell used for combat; always >0
+    protected int xcoordinate; //cell coordinates; >=0
+    protected int ycoordinate;
+    protected int id; //distinguishes between cell types; always >=0
     private HashMap<String,Double> chemicals;
 
     public CellAutomata(int strength, int xcoordinate, int ycoordinate, int id) {
@@ -96,6 +96,9 @@ public class CellAutomata {
         return chemicals.get("Troponin");
     }
 
+    //public void interactNeighbors(ArrayList<Cell> neighbors){
+    //leave blank
+    //}
 }
 
 
