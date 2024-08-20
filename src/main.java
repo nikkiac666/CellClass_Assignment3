@@ -1,6 +1,12 @@
+import java.io.*;
 
 public static void main(String[] args) {
-    CellAutomata cell = new CellAutomata(-56 ,-1 , 5 , 7 );
+    CellAutomata cell = new CellAutomata(1 ,1 , 1 , 1 );
+
+    cell.setStr(5);
+    cell.setXcoord(1);
+    cell.setYcoord(5);
+    cell.setID(4);
 
     //print cell strength, x and y coordinates, ID
     System.out.println("Stength: " + cell.getStrength());
@@ -14,7 +20,7 @@ public static void main(String[] args) {
     System.out.println("Creatine kinase levels: " + cell.getCreatineKinase() + " U/L");
     System.out.println("Troponin levels: " + cell.getTroponin() + " ng/mL \n");
 
-    ImmuneCell firstCell = new ImmuneCell(1, 1);
+    ImmuneCell firstCell = new ImmuneCell(-1, 1);
 
     System.out.println("Immune cell strength: "+ firstCell.strength);
     System.out.println("Immune cell (x,y): (" + firstCell.xcoordinate + "," + firstCell.ycoordinate + ")");

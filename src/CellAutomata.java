@@ -50,17 +50,29 @@ public class CellAutomata {
     }
 
     //setters for CellAutomata parameters
-    public void setStrength(int strength) {
-        this.strength = strength;
+    public void setStr(int str) {
+        if( str < 0 ) {
+            throw new IllegalArgumentException("Strength must be at least 0");
+        }
+        this.strength = str;
     }
-    public void setXcoordinate(int xcoordinate) {
-        this.xcoordinate = xcoordinate;
+    public void setXcoord(int xcoord) {
+        if ( xcoord < 0 ) {
+            throw new IllegalArgumentException("Xcoordinate must be at least 0");
+        }
+        this.xcoordinate = xcoord;
     }
-    public void setYcoordinate(int ycoordinate) {
-        this.ycoordinate = ycoordinate;
+    public void setYcoord(int ycoord) {
+        if ( ycoord < 0 ) {
+            throw new IllegalArgumentException("Ycoordinate must be at least 0");
+        }
+        this.ycoordinate = ycoord;
     }
-    public void setId(int id) {
-        this.id = id;
+    public void setID(int ID) {
+        if( ID < 0 ) {
+            throw new IllegalArgumentException("ID must be at least 0");
+        }
+        this.id = ID;
     }
 
     //setters and getters for chemicals
@@ -97,7 +109,7 @@ public class CellAutomata {
     }
 
     //public void interactNeighbors(ArrayList<Cell> neighbors){
-    //leave blank
+        //leave blank
     //}
 }
 
