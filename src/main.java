@@ -1,15 +1,8 @@
-import java.io.*;
-
 public static void main(String[] args) {
-    CellAutomata cell = new CellAutomata(1 ,1 , 1 , 1 );
-
-    cell.setStr(5);
-    cell.setXcoord(1);
-    cell.setYcoord(5);
-    cell.setID(4);
+    CellAutomata cell = new CellAutomata(2 ,1 , 1 , 1 );
 
     //print cell strength, x and y coordinates, ID
-    System.out.println("Stength: " + cell.getStrength());
+    System.out.println("Strength: " + cell.getStrength());
     System.out.println("(x,y): (" + cell.getXcoordinate() + "," + cell.getYcoordinate() + ")");
     System.out.println("Cell ID: " + cell.getId() + "\n");
 
@@ -20,27 +13,27 @@ public static void main(String[] args) {
     System.out.println("Creatine kinase levels: " + cell.getCreatineKinase() + " U/L");
     System.out.println("Troponin levels: " + cell.getTroponin() + " ng/mL \n");
 
-    ImmuneCell firstCell = new ImmuneCell(-1, 1);
+    ImmuneCell firstCell = new ImmuneCell(1,1);
 
-    System.out.println("Immune cell strength: "+ firstCell.strength);
-    System.out.println("Immune cell (x,y): (" + firstCell.xcoordinate + "," + firstCell.ycoordinate + ")");
-    System.out.println("Immune cell ID: " + firstCell.id + "\n");
+    System.out.println("Immune cell strength: "+ firstCell.getStrength());
+    System.out.println("Immune cell (x,y): (" + firstCell.getXcoordinate() + "," + firstCell.getYcoordinate() + ")");
+    System.out.println("Immune cell ID: " + firstCell.getId() + "\n");
 
     TissueCell secondCell = new TissueCell(1, 1);
 
-    System.out.println("Tissue cell strength: "+ secondCell.strength);
-    System.out.println("Tissue cell (x,y): (" + secondCell.xcoordinate + "," + secondCell.ycoordinate + ")");
-    System.out.println("Tissue cell ID: " + secondCell.id + "\n");
+    System.out.println("Tissue cell strength: "+ secondCell.getStrength());
+    System.out.println("Tissue cell (x,y): (" + secondCell.getXcoordinate() + "," + secondCell.getYcoordinate() + ")");
+    System.out.println("Tissue cell ID: " + secondCell.getId() + "\n");
 
     DeadCell thirdCell = new DeadCell(1, 1);
 
-    System.out.println("Dead cell strength: "+ thirdCell.strength);
-    System.out.println("Dead cell (x,y): (" + thirdCell.xcoordinate + "," + thirdCell.ycoordinate + ")");
-    System.out.println("Dead cell ID: " + thirdCell.id + "\n");
+    System.out.println("Dead cell strength: "+ thirdCell.getStrength());
+    System.out.println("Dead cell (x,y): (" + thirdCell.getXcoordinate() + "," + thirdCell.getYcoordinate() + ")");
+    System.out.println("Dead cell ID: " + thirdCell.getId() + "\n");
 
     CancerCell fourthCell = new CancerCell(1, 1);
 
-    System.out.println("Cancer cell strength: "+ fourthCell.strength);
-    System.out.println("Cancer cell (x,y): (" + fourthCell.xcoordinate + "," + fourthCell.ycoordinate + ")");
-    System.out.println("Cancer cell ID: " + fourthCell.id + "\n");
+    System.out.println("Cancer cell strength: "+ fourthCell.getStrength());
+    System.out.println("Cancer cell (x,y): (" + fourthCell.getXcoordinate() + "," + fourthCell.getYcoordinate() + ")");
+    System.out.println("Cancer cell ID: " + fourthCell.getId() + "\n");
 }

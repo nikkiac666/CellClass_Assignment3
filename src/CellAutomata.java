@@ -1,17 +1,17 @@
 import java.util.HashMap;
 
 public class CellAutomata {
-    protected int strength; //strength of the cell used for combat; always >0
-    protected int xcoordinate; //cell coordinates; >=0
-    protected int ycoordinate;
-    protected int id; //distinguishes between cell types; always >=0
+    private int strength; //strength of the cell used for combat; always >0
+    private int xcoordinate; //cell coordinates; >=0
+    private int ycoordinate;
+    private int id; //distinguishes between cell types; always >=0
     private HashMap<String,Double> chemicals;
 
     public CellAutomata(int strength, int xcoordinate, int ycoordinate, int id) {
-        this.strength = Math.max(strength, 0);
-        this.xcoordinate = Math.max(xcoordinate, 0);
-        this.ycoordinate = Math.max(ycoordinate, 0);
-        this.id = Math.max(id, 0);
+        setStr(strength);
+        setXcoord(xcoordinate);
+        setYcoord(ycoordinate);
+        setID(id);
 
         chemicals = new HashMap<>();
 

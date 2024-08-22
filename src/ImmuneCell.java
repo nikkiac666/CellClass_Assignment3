@@ -1,10 +1,8 @@
 public class ImmuneCell extends CellAutomata {
 
     public ImmuneCell(int xcoordIn, int ycoordIn) {
-        super(3, 0, 0, 4);
+        super(3, 2, 2, 4);
 
-        this.xcoordinate = xcoordIn;
-        this.ycoordinate = ycoordIn;
     }
 
     //@Override
